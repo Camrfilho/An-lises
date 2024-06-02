@@ -36,7 +36,6 @@ theme_estat <- function(...) {
   )
 }
 
-# Agrupar os dados por década e contar o número de tipos de obras lançadas em cada década
 dados_decada <- dados %>%
   mutate(Decada = case_when(
     date_aired >= 1969 & date_aired < 1970 ~ 1969,
@@ -117,7 +116,7 @@ ggplot(dados) +
     title="Relação entre as notas IMDB e engajamento"
   ) +
   theme_estat() +
-  theme(plot.title = element_text(hjust = 0.5))  # Centraliza o título
+  theme(plot.title = element_text(hjust = 0.5)) 
 ggsave("disp_uni.pdf", width = 158, height = 93, units = "mm")
 
 Análise 5
